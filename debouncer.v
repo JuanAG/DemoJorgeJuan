@@ -73,7 +73,11 @@ endmodule // debouncer
 // Edge detector                                                        //
 //////////////////////////////////////////////////////////////////////////
 
-module edge_detector (
+module edge_detector #(
+	parameter detect = 0,
+	parameter mode = 0
+)
+(
     input wire ck,      // clock
     input wire x,       // input
     output reg z = 0    // output
@@ -83,8 +87,9 @@ module edge_detector (
 
     always @(posedge ck) begin
         old_x <= x;
-        if (old_x != x && x == 1'b1)
+        if (old_x != x && x == 1'b1 && detect == 0){
             z <= 1;
+		}		
         else
             z <= 0;
     end
