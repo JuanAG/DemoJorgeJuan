@@ -60,11 +60,16 @@ module debouncer #(
         /* If the input is equal to the output, keep the same output
          * and reset the counter */
         if (x == z)
-            /*** complete ***/
+            /***
+			 Algun cambio importante
+		***/
+
         /* If the input is different from the output, decrement the
          * counter and set z = x only if the counter is zero */
         else begin
-            /*** complete ***/
+            /***
+			 Algun cambio importante
+		***/
         end
     end
 endmodule // debouncer
