@@ -1,8 +1,8 @@
 // Design: debouncer
 // Description: Counter-based debouncers.
-// Author: Jorge Juan <jjchico@dte.us.es>
+// Author: Juan <juan@j.es>
 // Copyright Universidad de Sevilla, Spain
-// Date: 21-12-2011
+// Date: 18-2-2020
 
 ////////////////////////////////////////////////////////////////////////////////
 // This file is free software: you can redistribute it and/or modify it under //
