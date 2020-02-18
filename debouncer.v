@@ -46,7 +46,7 @@
 //////////////////////////////////////////////////////////////////////////
 
 module debouncer #(
-    parameter delay = 50000   // number of cycles to consider stable
+    parameter delay = 120000   // number of cycles to consider stable
                               // it makes 1ms with a 50MHz clock
     )(
     input wire ck,      // clock
@@ -60,16 +60,11 @@ module debouncer #(
         /* If the input is equal to the output, keep the same output
          * and reset the counter */
         if (x == z)
-            /***
-			 Algun cambio importante
-		***/
-
+            /*** complete ***/
         /* If the input is different from the output, decrement the
          * counter and set z = x only if the counter is zero */
         else begin
-            /***
-			 Algun cambio importante
-		***/
+            /*** complete ***/
         end
     end
 endmodule // debouncer
@@ -78,7 +73,11 @@ endmodule // debouncer
 // Edge detector                                                        //
 //////////////////////////////////////////////////////////////////////////
 
-module edge_detector (
+module edge_detector #(
+	parameter detect = 0,
+	parameter mode = 0
+)
+(
     input wire ck,      // clock
     input wire x,       // input
     output reg z = 0    // output
@@ -88,10 +87,13 @@ module edge_detector (
 
     always @(posedge ck) begin
         old_x <= x;
-        if (old_x != x && x == 1'b1)
+        if (old_x != x && x == 1'b1 && detect == 0){
             z <= 1;
-        else
+		}		
+        else{
             z <= 0;
+		// Codigo extra
+		}
     end
 endmodule // edge_detector
 
