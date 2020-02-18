@@ -62,3 +62,12 @@ Al terminar el ejercicio, generar un informe dentro de la misma carpeta del proy
 
     $ git log --all --decorate --graph > informe.txt
     $ git reflog >> informe.txt
+
+## Autores
+
+* Juan Alcántara
+* Jorge Juan-Chico
+
+## Licencia
+
+CC-AT-SA
