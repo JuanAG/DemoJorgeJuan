@@ -11,9 +11,11 @@
 // any later version. See <http://www.gnu.org/licenses/>.                     //
 ////////////////////////////////////////////////////////////////////////////////
 
-`timescale 1ns / 1ps
+`timescale 10ns / 1ps
 
 // Test bench
+
+// Algun cambio extra
 
 module test();
 
