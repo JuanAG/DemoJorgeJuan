@@ -90,8 +90,10 @@ module edge_detector #(
         if (old_x != x && x == 1'b1 && detect == 0){
             z <= 1;
 		}		
-        else
+        else{
             z <= 0;
+		// Codigo extra
+		}
     end
 endmodule // edge_detector
 
